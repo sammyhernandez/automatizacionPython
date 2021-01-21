@@ -4,6 +4,7 @@ import time
 
 driver = webdriver.Chrome(executable_path=r"C:\ChromeDriver\chromedriver.exe")
 driver.get("https://gmail.com")
+driver.maximize_window()
 
 
 usuario = driver.find_element_by_id("identifierId")
