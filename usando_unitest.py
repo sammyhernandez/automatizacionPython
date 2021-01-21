@@ -13,7 +13,7 @@ class usando_unitest(unittest.TestCase):
     def test_buscar_(self):
         driver = self.driver       
         driver.get("https://www.google.com")
-        self.assertIn("Google",driver.title,"Esto es una prueba")
+        self.assertIn("Google",driver.title,"No se encontro la Palabra Google")
         elemento = driver.find_element_by_name("q")
         elemento.send_keys("selenium")
         elemento.send_keys(Keys.RETURN)
