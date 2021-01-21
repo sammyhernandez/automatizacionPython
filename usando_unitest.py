@@ -7,11 +7,13 @@ class usando_unitest(unittest.TestCase):
     
     def setUp(self): 
          self.driver = webdriver.Chrome(executable_path=r"C:\ChromeDriver\chromedriver.exe")
+         self.driver.maximize_window()
+        
 
     def test_buscar_(self):
-        driver = self.driver
+        driver = self.driver       
         driver.get("https://www.google.com")
-        self.assertIn("Google",driver.title)
+        self.assertIn("Google",driver.title,"Esto es una prueba")
         elemento = driver.find_element_by_name("q")
         elemento.send_keys("selenium")
         elemento.send_keys(Keys.RETURN)
